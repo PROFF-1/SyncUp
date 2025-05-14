@@ -1,15 +1,14 @@
 import { StyleSheet, Text, View, TouchableOpacity,Image} from 'react-native'
 import React from 'react'
 import Buttons from '../Components/Buttons'
-import FullLogoSVGComponent from '../Components/Svgs/FullLogo'
+import IconLogoSVGComponent from '../Components/Svgs/IconLogoSvg'
 
 
-export default function UserTypeScreen({navigation}) {
+export default function GettingStarted({navigation}) {
   return (
     <View style={styles.container}>
-      <FullLogoSVGComponent style={styles.logo}/>
-      <Buttons title="Lecturer" onPress={() => navigation.navigate('GettingStarted')} customStyles={styles.Buttons1}/>
-        <Buttons title="Student" onPress={() => console.log('User')} customStyles={styles.Buttons2}/>
+      <IconLogoSVGComponent style={styles.logo}/>
+        <Buttons title="Get Started" onPress={() => navigation.navigate('AuthenticationScreen')} customStyles={styles.Buttons1}/>
     </View>
   )
 }
@@ -25,15 +24,10 @@ const styles = StyleSheet.create({
     bottom:145,
     left: 40
   },
-  Buttons2:{
-    position: 'absolute',
-    bottom:67,
-    left: 40
-  },
   logo:{
     position: 'absolute',
-    top: 40,
-    left: 40,
+    top: '30%',
+    left: '30%',
     width: 200,
     height: 200,
   }
