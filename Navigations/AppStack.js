@@ -6,16 +6,18 @@ import GettingStarted from '../Screens/GettingStarted'
 import UserTypeScreen from '../Screens/UserTypeScreen'
 import AuthenticationScreen from '../Screens/AuthenticationScreen'
 import HomeScreen from '../Screens/HomeScreen'
+import AppTabs from './AppTabs'
 
 const Stack = createStackNavigator();
 export default function AppStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="GettingStarted">
+      <Stack.Navigator initialRouteName="AppTabs">
         <Stack.Screen name="UserTypeScreen" component={UserTypeScreen} options={{headerShown: false }}/>
         <Stack.Screen name="GettingStarted" component={GettingStarted} options={{headerShown: false }}/>
         <Stack.Screen name="AuthenticationScreen" component={AuthenticationScreen} options={{headerShown:false }}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen} options={{headerShown: false}}/>
+        <Stack.Screen name='AppTabs' component={AppTabs} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

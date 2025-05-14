@@ -2,6 +2,7 @@ import { StyleSheet, Text, View,Alert } from 'react-native'
 import React from 'react'
 import Buttons from '../Components/Buttons'
 import { getAuth,signOut } from 'firebase/auth';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen({navigation}) {
 
@@ -17,17 +18,17 @@ export default function HomeScreen({navigation}) {
     }
   };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>HomeScreen</Text>
-      <Buttons title='Logout' onPress={handleLogout}/>
-    </View>
+    
+    
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    alignItems:'center',
-    justifyContent:'center'
+   
   }
 })
