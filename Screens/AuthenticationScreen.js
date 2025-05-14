@@ -70,7 +70,7 @@ export default function AuthenticationScreen({ navigation }) {
       Alert.alert('Success', `Welcome, ${name}! Your account has been created.`);
   
       // Navigate to the next screen (e.g., Home screen)
-      navigation.navigate('HomeScreen'); // Replace 'HomeScreen' with your target screen
+      navigation.navigate('AppTabs'); // Replace 'HomeScreen' with your target screen
     } catch (error) {
       // Handle specific Firebase errors
       switch (error.code) {
@@ -101,7 +101,7 @@ export default function AuthenticationScreen({ navigation }) {
       const userCredentials = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredentials.user;
       // Navigate to the next screen (e.g., Home screen)
-      navigation.navigate('HomeScreen'); // Replace 'HomeScreen' with your target screen
+      navigation.navigate('AppTabs'); // Replace 'HomeScreen' with your target screen
     } catch (error) {
       // Handle specific Firebase errors
       switch (error.code) {
